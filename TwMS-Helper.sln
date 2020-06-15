@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwMS-Helper", "TwMS-Helper\TwMS-Helper.csproj", "{7094D3F0-6249-47B0-84D7-476398ABEC80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountTool", "AccountTool\AccountTool.csproj", "{8E69C109-8DAC-462C-9785-29FE8A241693}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7094D3F0-6249-47B0-84D7-476398ABEC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7094D3F0-6249-47B0-84D7-476398ABEC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7094D3F0-6249-47B0-84D7-476398ABEC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7094D3F0-6249-47B0-84D7-476398ABEC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E69C109-8DAC-462C-9785-29FE8A241693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E69C109-8DAC-462C-9785-29FE8A241693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E69C109-8DAC-462C-9785-29FE8A241693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E69C109-8DAC-462C-9785-29FE8A241693}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {759353BB-BB2C-4A5F-895F-DD74EEAB2478}
+	EndGlobalSection
+EndGlobal
