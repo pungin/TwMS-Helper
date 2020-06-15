@@ -212,11 +212,11 @@ namespace TwMS_Helper
                 string commandLine = "";
                 if (game_commandLine != "")
                 {
-                    commandLine = game_commandLine;
                     string account = null;
                     string password = null;
                     if (account != null && password != null && account != "" && password != "")
                     {
+                        commandLine = game_commandLine;
                         Regex regex = new Regex("%s");
                         commandLine = regex.Replace(commandLine, account, 1);
                         commandLine = regex.Replace(commandLine, password, 1);
