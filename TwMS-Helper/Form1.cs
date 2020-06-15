@@ -21,7 +21,7 @@ namespace TwMS_Helper
             msPath.Text = ConfigAppSettings.GetValue("msPath", "");
             if (msPath.Text == "")
             {
-                string dir_reg_0 = dir_reg.Replace("HKEY_LOCAL_MACHINE\\", "");
+                string dir_reg_0 = dir_reg.Replace("HKEY_LOCAL_MACHINE\\", "").Replace("HKEY_CURRENT_USER\\", "");
 
                 try
                 {
@@ -32,6 +32,16 @@ namespace TwMS_Helper
                     {
                         ConfigAppSettings.SetValue("msPath", myRegistry.Read(dir_value_name));
                         msPath.Text = myRegistry.Read(dir_value_name);
+                    }
+                    else
+                    {
+                        myRegistry.BaseRegistryKey = Registry.LocalMachine;
+                        myRegistry.SubKey = dir_reg_0;
+                        if (myRegistry.Read(dir_value_name) != "")
+                        {
+                            ConfigAppSettings.SetValue("msPath", myRegistry.Read(dir_value_name));
+                            msPath.Text = myRegistry.Read(dir_value_name);
+                        }
                     }
                 }
                 catch
@@ -65,14 +75,19 @@ namespace TwMS_Helper
 
         private void setAccountTool_Click(object sender, EventArgs e)
         {
-            string accountToolPath = string.Format("{0}\\AccountTool.exe", System.Environment.CurrentDirectory);
+            string accountToolPath = string.Format("{0}\\MapleStory.exe", System.Environment.CurrentDirectory);
             if (accountToolPath == "" || !File.Exists(accountToolPath))
             {
                 MessageBox.Show("帳密工具檔案丟失，請嘗試重新下載。");
                 return;
             }
-            string dir_reg_0 = dir_reg.Replace("HKEY_LOCAL_MACHINE\\", "");
+            string dir_reg_0 = dir_reg.Replace("HKEY_LOCAL_MACHINE\\", "").Replace("HKEY_CURRENT_USER\\", "");
             ModifyRegistry myRegistry = new ModifyRegistry();
+            // HongKong Beanfun
+            myRegistry.BaseRegistryKey = Registry.LocalMachine;
+            myRegistry.SubKey = dir_reg_0;
+            myRegistry.Write(dir_value_name, accountToolPath);
+            // Taiwan Beanfun
             myRegistry.BaseRegistryKey = Registry.CurrentUser;
             myRegistry.SubKey = dir_reg_0;
             myRegistry.Write(dir_value_name, accountToolPath);

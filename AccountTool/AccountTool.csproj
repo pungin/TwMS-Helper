@@ -7,7 +7,7 @@
     <ProjectGuid>{8E69C109-8DAC-462C-9785-29FE8A241693}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AccountTool</RootNamespace>
-    <AssemblyName>AccountTool</AssemblyName>
+    <AssemblyName>MapleStory</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
